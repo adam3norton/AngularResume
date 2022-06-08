@@ -1,0 +1,83 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header-grid {
+  height: 20vh;
+  display: grid;
+  grid-template-columns: 250px 1fr 120px;
+  grid-template-rows: 5vh 15vh;
+}
+
+.head {
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.grid-col-span-2 {
+  grid-column: span 2;
+}
+
+.grid-row-span-2 {
+  grid-row: span 2;
+}
+
+.logo {
+  background-color: #fca311;
+}
+.login {
+  background-color: #000000;
+  color: rgb(163, 163, 163);
+  transition: background-color 0.3s, color 0.3s;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+.login:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.angular {
+  background-color: #2b2b2b;
+  color: #5c5c5c;
+  white-space: pre;
+}
+
+.drop {
+  background-color: #e5e5e5;
+  transition: background-color 0.5s;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.drop:hover {
+  background-color: #d4d4d4;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdowns-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(191, 191, 191);
+  transition: color 0.4s;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #fca311;
+}
