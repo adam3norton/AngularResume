@@ -1,0 +1,91 @@
+body {
+  background-color: rgb(26, 26, 26);
+  height: 1200px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: white;
+  font-size: 36px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 3px;
+}
+
+.skills-grid {
+  display: grid;
+  height: 85vh;
+  margin-left: 12%;
+  margin-right: 12%;
+  margin-bottom: 3%;
+  margin-top: 6%;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.skills {
+  background: rgb(255, 255, 255);
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px rgb(184, 184, 184);
+
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.skills:hover {
+  transform: scale(1.06);
+  box-shadow: 5px 5px 15px rgb(64, 64, 64);
+}
+
+.web-dev {
+  background-image:url('../../../assets/Website-Graphics-Web-Dev.jpg');
+}
+
+.web-scrape {
+  background-image:url('../../../assets/Website-Graphics-Web-Scraping.jpg');
+}
+.machine-learning {
+  background-image:url('../../../assets/Website-Graphics-ML.jpg');
+}
+.ui {
+  background-image:url('../../../assets/Website-Graphics-UI.jpg');
+}
+.brand-design {
+  background-image:url('../../../assets/Website-Graphics-Brand-Design.jpg');
+}
+
+.automated-tasks {
+  background-image:url('../../../assets/Website-Graphics-Automated-Tasks.jpg');
+}
+
+.button-see-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  background-color: black;
+  color: rgb(194, 194, 194);
+  border:rgb(255, 255, 255);
+  border-style: solid;
+  border-width: 2px;
+
+  width: 200px;
+  height: 50px;
+
+  transition: background-color .5s, color .5s;
+}
+
+.button-see-more:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
