@@ -25,6 +25,10 @@ body {
 
 .logo {
   background-color: #fca311;
+  background-image: url('../../assets/Personal-Logo-1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
 }
 .login {
   background-color: #000000;
