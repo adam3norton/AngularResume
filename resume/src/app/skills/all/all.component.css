@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(26, 26, 26);
+  color: white;
+}
+
+.title {
+  color: white;
+  font-size: 36px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 3px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-grid {
+  background-color: rgb(26, 26, 26);
+  padding-left: 7%;
+  padding-right: 7%;
+
+  display: grid;
+  gap: 0rem;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+
+.skill_card {
+  color:rgb(26, 26, 26);
+  height: 35vh;
+  background: rgb(255,255,255);
+  border:rgb(46, 46, 46);
+  border-style: solid;
+  border-width: 0px;
+
+  border-radius: 0px;
+  transition: background-color 0.4s, transform 0.2s, box-shadow 0.4s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.skill_card:hover {
+  transform: scale(1.01);
+  background-color: rgb(246, 238, 211);
+  /* box-shadow: 4px 4px 12px rgb(198, 198, 198); */
+}
+

@@ -85,3 +85,37 @@ a:hover {
   text-decoration: underline;
   color: #fca311;
 }
+
+@media(max-width: 900px) {
+  .header-grid {
+    height: 12vh;
+    grid-template-columns: 150px 1fr 1fr;
+    grid-template-rows: 3vh 9vh;
+  }
+  .drop {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .login {
+    letter-spacing: 2px;
+    font-size: 10px;
+  }
+  .angular {
+    letter-spacing: 1px;
+    font-size: 10px;
+  }
+
+}
+
+@media(max-width: 450px) {
+  .header-grid {
+    height: 10vh;
+    grid-template-columns: 50px 1fr 1fr;
+    grid-template-rows: 2vh 8vh;
+  }
+  .drop {
+    font-size: 10px;
+    letter-spacing: 0px;
+  }
+}
+

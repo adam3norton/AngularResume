@@ -13,6 +13,18 @@ import { SkillsTeaserComponent } from './home/skills-teaser/skills-teaser.compon
 import { VolTeaserComponent } from './home/vol-teaser/vol-teaser.component';
 import { TickerComponent } from './home/ticker/ticker.component';
 import { SkillWelcomeComponent } from './home/skill-welcome/skill-welcome.component';
+import { FooterComponent } from './footer/footer.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { VolunteerComponent } from './volunteer/volunteer.component';
+import { EducationComponent } from './education/education.component';
+import { WebDevComponent } from './skills/web-dev/web-dev.component';
+import { MachineLearningComponent } from './skills/machine-learning/machine-learning.component';
+import { BrandDesignComponent } from './skills/brand-design/brand-design.component';
+import { WebScrapingComponent } from './skills/web-scraping/web-scraping.component';
+import { UiComponent } from './skills/ui/ui.component';
+import { AutomationComponent } from './skills/automation/automation.component';
+import { AllComponent } from './skills/all/all.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +37,19 @@ import { SkillWelcomeComponent } from './home/skill-welcome/skill-welcome.compon
     SkillsTeaserComponent,
     VolTeaserComponent,
     TickerComponent,
-    SkillWelcomeComponent
+    SkillWelcomeComponent,
+    FooterComponent,
+    SkillsComponent,
+    ExperienceComponent,
+    VolunteerComponent,
+    EducationComponent,
+    WebDevComponent,
+    MachineLearningComponent,
+    BrandDesignComponent,
+    WebScrapingComponent,
+    UiComponent,
+    AutomationComponent,
+    AllComponent
   ],
   imports: [
     BrowserModule,
