@@ -1,0 +1,71 @@
+<body>
+  <section class="content">
+    <button mat-button routerLink="/allweb">Back to Web Dev</button>
+    <br><br>
+    <h1>Style Data with Directives</h1>
+    <br><br>
+    <h2>Data:</h2>
+    <h3>8</h3>
+
+    <div>
+      <h3>Select a style to add</h3>
+      <button style="margin-right: 1rem;"
+              mat-stroked-button color="basic"
+              (click)="toggleBorder()"
+              >Border</button>
+      <button style="margin-right: 1rem;"
+              mat-stroked-button color="basic"
+              (click)="toggleShadow()"
+              >Box Shadow</button>
+      <button style="margin-right: 1rem;"
+              mat-stroked-button color="basic"
+              (click)="toggleBlue()"
+              >Turn Blue</button>
+    </div>
+
+    <br><br><hr><br><br>
+
+    <p>Using Angular's <code>ngClass</code> directive, the below <code>div</code> will be styled
+       according to your selection.</p>
+    <br>
+    <h1>Result: <b></b></h1>
+    <br>
+    <div class="result"
+    [ngClass]="{'border': addBorder === true,
+                'shadow': addShadow === true,
+                'blue': turnBlue === true}">Result
+    </div>
+
+    <br><br><hr><br><br>
+
+    <figure>
+      <pre>
+        <code spellcheck="false">
+          ----- HTML -----
+          &#60;div{{">"}}
+          {{"["}}ngClass]= &#x7B;'border': addBorder === true,
+                      'shadow': addShadow === true,
+                      'blue': turnBlue === true}">Result
+          &#60;/div{{">"}}
+
+          ----- CSS -----
+          .border &#x7B;
+            border-color: red;
+            border-style: solid;
+            border-width: 3px;
+          }
+
+          .shadow &#x7B;
+            box-shadow: 4px 4px 10px rgb(112, 112, 112);
+          }
+
+          .blue &#x7B;
+            background-color: rgb(184, 200, 237);
+          }
+        </code>
+      </pre>
+    </figure>
+  </section>
+</body>
+
+

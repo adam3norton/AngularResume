@@ -1,0 +1,41 @@
+body {
+  height: 1200px;
+}
+
+.content {
+  margin: 12%;
+}
+
+code {
+  background-color: transparent;
+  color: rgb(89, 89, 89);
+  font-size: 16px;
+}
+
+figure {
+  background-color: rgb(202, 202, 202);
+  height: 500px;
+}
+
+.data-grid {
+  display: grid;
+  gap: 2rem;
+  height: 110vh;
+  width: 100%;
+
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.data {
+  background-color: white;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(202, 202, 202);
+
+  padding: 10%;
+}
+
+a {
+  text-decoration: none;
+}

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./web-dev.component.css']
 })
 export class WebDevComponent implements OnInit {
+  public skillSelected: boolean = false;
 
   constructor() { }
 

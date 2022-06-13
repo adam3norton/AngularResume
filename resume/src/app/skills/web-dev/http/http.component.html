@@ -1,0 +1,75 @@
+<body>
+  <section class="content">
+    <button mat-button routerLink="/allweb">Back to Web Dev</button>
+    <br><br>
+    <h1>Send 'Get' and 'Post' HTTP Requests</h1>
+    <br><br><hr><br><br>
+
+    <p>Fill in the forms and submit the data, then click 'Retrieve Data' to
+       retrieve the data on the right hand side.
+    </p>
+    <br>
+    <br>
+
+    <br><br><hr><br><br>
+    <section class="data-grid">
+      <div class="data" [formGroup]="signUpForm">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" formControlName="dogName">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>Breed</mat-label>
+          <input matInput type="text" formControlName="dogBreed">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>Age</mat-label>
+          <input matInput type="number" formControlName="dogAge">
+        </mat-form-field>
+        <br>
+        <button mat-stroked-button (click)="onSubmit()">Post Data</button>
+      </div>
+      <div class="data">
+        <button mat-stroked-button (click)="onRetrieve()">Retrieve Data</button>
+        <mat-card *ngFor="let dog of dogs">
+          <mat-card-title>{{ dog.dogName }}</mat-card-title>
+          <mat-card-subtitle>{{ dog.dogBreed }}, {{ dog.dogAge }} years old.</mat-card-subtitle>
+        </mat-card>
+      </div>
+    </section>
+
+    <br><br><hr><br><br>
+
+    <figure>
+      <pre>
+        <code spellcheck="false">
+          private customObs: Observable = new Observable((subscriber) => {{'{'}}
+            subscriber.next(this.data);
+            {{'}'}});
+
+          onMap() {{'{'}}
+            this.customObs
+              .pipe(map((x) => x * x)).subscribe((data: number) => {{'{'}}
+                this.displaySuccess = true;
+                this.dataToDisplay = data;
+              {{'}'}})
+          {{'}'}}
+
+          onFirst() {{'{'}}
+            this.customObs
+              .pipe(first()).subscribe((data: number) => {{'{'}}
+                console.log(data);
+                this.displaySuccess = true;
+                this.dataToDisplay = data;
+                {{'}'}})
+            {{'}'}}
+        </code>
+      </pre>
+    </figure>
+  </section>
+</body>
+
+
+

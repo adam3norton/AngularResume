@@ -1,0 +1,168 @@
+body {
+  background-color: rgb(26, 26, 26);
+  height: 1200px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: white;
+  font-size: 36px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 3px;
+}
+
+.dotted-line {
+  height: 800px;
+  width: 1px;
+  border-right: dotted;
+  border-width: 3px;
+  border-color: #ffffff;
+}
+
+.experience {
+  background-color: #fca311;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.exp-outline {
+  background-color: transparent;
+  height: 70px;
+  width: 70px;
+  border-color: #fca311;
+  border-width: 0.6px;
+  border-style: solid;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  transition: background-color 0.4s;
+}
+
+.outline-1 {
+  top: 529px;
+}
+
+.outline-2 {
+  top: 729px;
+}
+
+.outline-3 {
+  top: 929px;
+}
+
+.outline-4 {
+  top: 1129px;
+}
+
+.exp-1 {
+  top: 550px;
+}
+
+.exp-2 {
+  top: 750px;
+}
+
+.exp-3 {
+  top: 950px;
+}
+
+.exp-4 {
+  top: 1150px;
+}
+
+.connector {
+  background-color: transparent;
+  top: 3160px;
+  left: 37%;
+  position: absolute;
+  border-width: 2px;
+  border-color: #fca311;
+  border-top: solid;
+  border-top-color: #fca311;
+  height: 2px;
+  width: 10%;
+}
+
+.button-see-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  background-color: black;
+  color: rgb(194, 194, 194);
+  border:rgb(255, 255, 255);
+  border-style: solid;
+  border-width: 2px;
+
+  width: 200px;
+  height: 50px;
+
+  transition: background-color .5s, color .5s;
+}
+
+.button-see-more:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.job {
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fca311;
+  position: absolute;
+  height: 200px;
+  width: 30%;
+  padding: 20px;
+  color: white;
+}
+
+.job:hover ~ .exp-outline {
+  background-color: #fca311;
+}
+
+h2 {
+  margin: 0px;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #fca311;
+}
+
+h3 {
+  color:rgb(123, 123, 123)
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 12px;
+  }
+  p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 10px;
+  }
+  p {
+    font-size: 8px;
+  }
+}

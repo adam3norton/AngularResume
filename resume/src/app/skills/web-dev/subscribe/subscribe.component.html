@@ -1,0 +1,52 @@
+<body>
+  <section class="content">
+    <button mat-button routerLink="/allweb">Back to Web Dev</button>
+    <br><br>
+    <h1>Subscribe to changing data</h1>
+    <br><br>
+    <mat-form-field appearance="fill">
+      <mat-label>Type something here</mat-label>
+      <input matInput type="text" [(ngModel)]="userInput">
+    </mat-form-field>
+
+    <div>
+      <button mat-raised-button color="primary" (click)="onClickSubmit()">Alter Data</button>
+    </div>
+
+    <br><br><hr><br><br>
+
+    <p>Three seconds after clicking the button, the below phrase will change
+      to the text in the box.</p>
+
+    <p>Phrase: {{ paragraphData }}</p>
+    <br>
+    <p *ngIf="displaySuccess"
+       style="color: rgb(1, 174, 1)"><i>Success!</i></p>
+
+    <br><br><hr><br><br>
+
+    <figure>
+      <pre>
+        <code contenteditable spellcheck="false">
+          userInput: string = '';
+
+          private customObs: Observable = new Observable((subscriber) => {{ '{' }}
+            setTimeout(() => {{ '{' }}
+              console.log("paragraph: " + this.userInput);
+              subscriber.next(this.userInput);
+              {{ '}' }}, 3000);
+              {{ '}' }});
+
+          private newSubscription!: Subscription;
+
+          onClickSubmit() {{ '{' }}
+            this.newSubscription = this.customObs.subscribe((data: string) => {{ '{' }}
+              this.paragraphData = data;
+              console.log(data);
+            {{ '}'}});
+          {{'}'}}
+        </code>
+      </pre>
+    </figure>
+  </section>
+</body>

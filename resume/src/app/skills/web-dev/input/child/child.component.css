@@ -1,0 +1,8 @@
+mat-form-field {
+  width: 100% !important;
+}
+
+.horizontal-spacer {
+  height: 1rem;
+  width: 50px;
+}

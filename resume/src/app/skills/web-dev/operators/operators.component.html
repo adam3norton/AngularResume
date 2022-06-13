@@ -1,0 +1,63 @@
+<body>
+  <section class="content">
+    <button mat-button routerLink="/allweb">Back to Web Dev</button>
+    <br><br>
+    <h1>Alter Data with 'Pipeable' Operators</h1>
+    <br><br>
+    <h2>Data:</h2>
+    <h3>8</h3>
+
+    <div>
+      <h3>Select an operator</h3>
+      <button style="margin-right: 1rem;"
+              mat-stroked-button color="basic"
+              (click)="onMap()">.map()</button>
+      <button style="margin-right: 1rem;"
+              mat-stroked-button color="basic"
+              (click)="onFirst()">.first()</button>
+      <button style="margin-right: 1rem;"
+              mat-stroked-button color="basic"
+              (click)="onFilter()">.filter()</button>
+    </div>
+
+    <br><br><hr><br><br>
+
+    <p>Three seconds after clicking the button, the below phrase will change
+      to the text in the box.</p>
+    <br>
+    <h1>Result: <b>{{ dataToDisplay }}</b></h1>
+    <br>
+    <p *ngIf="displaySuccess"
+       style="color: rgb(1, 174, 1)"><i>Success!</i></p>
+
+    <br><br><hr><br><br>
+
+    <figure>
+      <pre>
+        <code spellcheck="false">
+          private customObs: Observable = new Observable((subscriber) => {{'{'}}
+            subscriber.next(this.data);
+            {{'}'}});
+
+          onMap() {{'{'}}
+            this.customObs
+              .pipe(map((x) => x * x)).subscribe((data: number) => {{'{'}}
+                this.displaySuccess = true;
+                this.dataToDisplay = data;
+              {{'}'}})
+          {{'}'}}
+
+          onFirst() {{'{'}}
+            this.customObs
+              .pipe(first()).subscribe((data: number) => {{'{'}}
+                console.log(data);
+                this.displaySuccess = true;
+                this.dataToDisplay = data;
+                {{'}'}})
+            {{'}'}}
+        </code>
+      </pre>
+    </figure>
+  </section>
+</body>
+

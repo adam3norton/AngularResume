@@ -1,0 +1,21 @@
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCfzqOKwOKa5OpdbgrBgHYyzp9EheZ95k&libraries=drawing&callback=initMap">
+</script>
+
+<body>
+  <div class="content">
+    <button mat-button routerLink="/allweb">Back to Web Dev</button>
+    <button mat-raised-button color="primary" (click)="onBegin()">Begin</button>
+    <br><br>
+    <h1>Right click to begin creating a geofence.</h1>
+    <br><br>
+    <div class="center">
+      <div id="map" class="map-full"></div>
+    </div>
+    <br><br>
+    <button style="margin-right: 20px;" mat-raised-button color="primary">Reset Geofence</button>
+    <button mat-raised-button color="primary">Finish Geofence</button>
+  </div>
+</body>
+
+

@@ -1,0 +1,64 @@
+<body>
+  <section class="content">
+    <button mat-button routerLink="/allweb">Back to Web Dev</button>
+    <br><br>
+    <h1>Send Data with @Input() and @Output()</h1>
+    <br><br><hr><br><br>
+
+    <p>Data is being passed from the parent to the child using the @Input() Decorator.
+       The 'Remove Player' button utilizes the @Output() Decorator and an EventEmitter to
+       signal to the parent component to remove an element from the list of players.
+    </p>
+    <br>
+    <br>
+
+    <br><br><hr><br><br>
+    <section class="data-grid">
+      <div class="data">
+        <h1>Parent Component</h1>
+        <div *ngFor="let player of players">
+          <mat-card>
+            <mat-card-title>{{ player.name }}</mat-card-title>
+            <mat-card-subtitle>{{ player.rings }} rings</mat-card-subtitle>
+          </mat-card>
+          <br>
+        </div>
+
+
+      </div>
+      <div class="data">
+        <h1>Child Component</h1>
+        <app-child *ngFor="let player of players"
+                   [player]="player"
+                   (playerRemoved)="onPlayerRemoved($event)">
+        </app-child>
+      </div>
+    </section>
+
+    <br><br><hr><br><br>
+
+    <figure>
+      <pre>
+        <code spellcheck="false">
+          ----- Child Component -----
+          @Input() player!: &#123;id: number, name: string, rings: number&#125;;
+          @Output() playerRemoved = new EventEmitter&#60;number&#62;()
+
+          onRemovePlayer(id: number) &#123;
+            this.playerRemoved.emit(id);
+          &#125;
+
+          ----- Parent Component Template -----
+          &#60;app-child *ngFor="let player of players"
+          [player]="player"
+          (playerRemoved)="onPlayerRemoved($event)"&#62;
+          &#60;/app-child&#62;
+
+        </code>
+      </pre>
+    </figure>
+  </section>
+</body>
+
+
+

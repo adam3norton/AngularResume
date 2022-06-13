@@ -1,0 +1,27 @@
+<body>
+  <div class="content">
+    <button mat-button routerLink="/allweb">Back to Web Dev</button>
+    <br><br>
+    <h1>Right click to place a pin.</h1>
+    <br><br>
+    <div class="center">
+      <div id="map" class="map-full"></div>
+    </div>
+    <div class="center">
+      <section class="pin-grid">
+        <div class="pin white" role="button" (click)="onChangeColor(0);"
+             [ngClass]="{selected: pinStyleCount === 0}"></div>
+        <div class="pin yellow" role="button" (click)="onChangeColor(1);"
+             [ngClass]="{selected: pinStyleCount === 1}"></div>
+        <div class="pin blue" role="button" (click)="onChangeColor(2);"
+             [ngClass]="{selected: pinStyleCount === 2}"></div>
+        <div class="pin red" role="button" (click)="onChangeColor(3);"
+             [ngClass]="{selected: pinStyleCount === 3}"></div>
+        <div class="pin green" role="button" (click)="onChangeColor(4);"
+             [ngClass]="{selected: pinStyleCount === 4}"></div>
+        <div class="pin black" role="button" (click)="onChangeColor(5);"
+             [ngClass]="{selected: pinStyleCount === 5}"></div>
+      </section>
+    </div>
+  </div>
+</body>

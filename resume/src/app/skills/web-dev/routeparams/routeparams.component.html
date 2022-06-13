@@ -1,0 +1,54 @@
+<body>
+  <section class="content">
+    <button mat-button routerLink="/allweb">Back to Web Dev</button>
+    <br><br>
+    <h1>Pass data through the route parameters</h1>
+    <br><br><hr><br><br>
+
+    <p>Keep an eye on the url as you select one of the bands below. The Component
+       that gets loaded will be dependent on the route that is passed into the url.
+    </p>
+    <br>
+    <br>
+
+    <br><br><hr><br><br>
+      <div class="data">
+
+          <div *ngFor="let band of bands">
+            <a routerLink="/band/{{band.id}}">
+              <mat-card>
+                <mat-card-title>{{ band.name }}</mat-card-title>
+                <mat-card-subtitle>{{ band.genre }}</mat-card-subtitle>
+              </mat-card>
+            </a>
+            <br>
+          </div>
+      </div>
+
+    <br><br><hr><br><br>
+
+    <figure>
+      <pre>
+        <code spellcheck="false">
+          ----- Child Component -----
+          @Input() player!: &#123;id: number, name: string, rings: number&#125;;
+          @Output() playerRemoved = new EventEmitter&#60;number&#62;()
+
+          onRemovePlayer(id: number) &#123;
+            this.playerRemoved.emit(id);
+          &#125;
+
+          ----- Parent Component Template -----
+          &#60;app-child *ngFor="let player of players"
+          [player]="player"
+          (playerRemoved)="onPlayerRemoved($event)"&#62;
+          &#60;/app-child&#62;
+
+        </code>
+      </pre>
+    </figure>
+  </section>
+</body>
+
+
+

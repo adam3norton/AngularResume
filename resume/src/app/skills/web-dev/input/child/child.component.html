@@ -1,0 +1,11 @@
+<h5>Player: <b>{{player.name}}        -       </b>
+  <span class="horizontal-spacer">  </span>
+  <button mat-stroked-button color="basic" (click)="onRemovePlayer(player.id)">Remove Player</button>
+</h5>
+
+
+<mat-form-field appearance="fill">
+  <mat-label>Rings</mat-label>
+  <input matInput type="number" [(ngModel)]="player.rings">
+</mat-form-field>
+
